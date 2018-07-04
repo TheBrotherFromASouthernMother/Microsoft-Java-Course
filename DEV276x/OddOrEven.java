@@ -32,7 +32,6 @@ public class OddOrEven {
         }
         return userChoice;
     }
-
     // decided to implement modulo because I M*****fing can
     private static int modulo (int dividend, int divisor) {
         int accumlator = 0;
@@ -51,7 +50,7 @@ public class OddOrEven {
         printDashes(25);
         int sum = computerFingers + userFingers;
         System.out.println(userFingers + " + " + computerFingers + " = " + sum);
-        //breaks
+
         if (modulo(sum, 2) == 0) {
             System.out.println(sum + " is even");
             if (userChoice.equals("o")) {
@@ -67,7 +66,6 @@ public class OddOrEven {
                 return "user victory";
             }
         }
-
 
     }
 
