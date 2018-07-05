@@ -8,10 +8,8 @@ public class Caesar {
         String shiftedText = "";
         for (int i = 0; i < textToShift.length; i++) {
             curr = (int) textToShift[i] + shift;
-            System.out.println(curr);
             if ( curr > 90) {
                 curr = ((curr - 65) % 26) + 65;
-                System.out.println((char) curr);
             }
             shiftedText += (char) curr;
         }
