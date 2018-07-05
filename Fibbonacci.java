@@ -30,7 +30,7 @@ public class Fibbonacci {
         fibSequence[0] = fibSequence[1];
         fibSequence[1] = next;
         if (currentIteration == target) {
-            return n[1];
+            return fibSequence[1];
         } else {
             return geNthFibbonacciNumberByRecursion(fibSequence, target, currentIteration + 1);
         }

@@ -16,7 +16,6 @@ public class OddOrEven {
         String userChoice = "";
         while (!userChoice.contains("e") && !userChoice.contains("o")) {
             printDashes(25);
-            System.out.println();
             System.out.println("Let’s play a \"game\" called Odds and Evens");
             System.out.print("what's your name? ");
             String userName = input.nextLine();
@@ -70,10 +69,12 @@ public class OddOrEven {
     }
 
     public static void main(String[] args) {
+        System.out.println(Math.random() * 10);
         String userAnswer = initGame();
         String result = runGame(userAnswer);
         System.out.println(result);
         printDashes(25);
+
 
     }
 }
