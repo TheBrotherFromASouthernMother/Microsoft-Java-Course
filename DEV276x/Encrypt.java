@@ -12,14 +12,14 @@ public class Encrypt {
         return encryptedText;
     }
 
-    public static void mystery(String foo, String bar, String zazz) {
-        System.out.println(zazz + " and " + foo + " like " + bar);
-    }
 
     public static void main(String[] args) {
         String enc = encryptString("No more war", 1, 2);
         System.out.println(enc);
-        System.out.println(groupify.ungroupify(enc));
+        String ungroupedText = groupify.ungroupify(enc);
+        String decipheredText = caesar.decipher(1, ungroupedText);
+        System.out.println(decipheredText) ;
+
 
     }
 
