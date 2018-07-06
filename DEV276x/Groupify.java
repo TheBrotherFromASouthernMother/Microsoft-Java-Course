@@ -10,12 +10,10 @@ public class Groupify {
                 } else {
                     groupedText += ' ';
                     groupedText += text.charAt(i);
-
                 }
             } else {
                 groupedText += text.charAt(i);
             }
-
         }
         while ((groupedText.length() -1) - groupedText.lastIndexOf(" ") < sizeOfGroups ) {
             groupedText += 'x';
