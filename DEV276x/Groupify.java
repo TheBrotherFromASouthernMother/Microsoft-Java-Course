@@ -23,7 +23,7 @@ public class Groupify {
         return groupedText;
     }
 
-    public static String ungroupify(String groupedText) {
+    public static String ungroupText(String groupedText) {
         String ungroupedText = "";
         for (int i = 0; i < groupedText.length(); i++) {
             if(groupedText.charAt(i) != ' ' && groupedText.charAt(i) != 'x') {

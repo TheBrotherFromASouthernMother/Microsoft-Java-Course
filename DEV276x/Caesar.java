@@ -1,21 +1,20 @@
 package DEV276x;
 
 public class Caesar {
+
     public static String cipher(int shift, String text) {
         String upper = text.toUpperCase();
         char[] textToShift = upper.toCharArray();
-        int curr;
+        int current;
         String shiftedText = "";
         for (int i = 0; i < textToShift.length; i++) {
-            curr = (int) textToShift[i] + shift;
-            if ( curr > 90) {
-                curr = ((curr - 65) % 26) + 65;
+            current = (int) textToShift[i] + shift;
+            if ( current > 90) {
+                current = ((current - 65) % 26) + 65;
             }
-            shiftedText += (char) curr;
+            shiftedText += (char) current;
         }
-
         return shiftedText;
-
     }
 
     public static String decipher(int deshift, String cipherText) {
@@ -31,6 +30,7 @@ public class Caesar {
         }
         return decipheredText;
     }
+
     public static void main(String[] args) {
        System.out.println( cipher(3, "XYZ") );
     }

@@ -16,7 +16,7 @@ public class Encrypt {
     public static void main(String[] args) {
         String enc = encryptString("No more war", 1, 2);
         System.out.println(enc);
-        String ungroupedText = groupify.ungroupify(enc);
+        String ungroupedText = groupify.ungroupText(enc);
         String decipheredText = caesar.decipher(1, ungroupedText);
         System.out.println(decipheredText) ;
 
