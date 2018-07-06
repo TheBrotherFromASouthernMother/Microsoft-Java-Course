@@ -77,27 +77,42 @@ public class Battleship {
         int numberOfShipsDeployed = 0;
         boolean outOfBounds = true;
         System.out.println(board[0][11]);
-        while (numberOfShipsDeployed < 5) {
-            while (outOfBounds) {
-                System.out.print("Enter X coordinate for your ship: ");
-                x = input.nextInt();
-                System.out.print("Enter Y coordinate for your ship: ");
-                y = input.nextInt();
-                if (!(x < 0 || x > 9 ) && !(y < 0 || y > 9 )) {
-                    outOfBounds = false;
-                    board[x + 2][y + 2] = -3;
-                }
-            }
-            numberOfShipsDeployed ++;
-            outOfBounds = true;
-            System.out.println(numberOfShipsDeployed);
-            x = -1;
-            y = -1;
-        }
+//        while (numberOfShipsDeployed < 5) {
+//            while (outOfBounds) {
+//                System.out.print("Enter X coordinate for your ship: ");
+//                x = input.nextInt();
+//                System.out.print("Enter Y coordinate for your ship: ");
+//                y = input.nextInt();
+//                if (!(x < 0 || x > 9 ) && !(y < 0 || y > 9 )) {
+//                    outOfBounds = false;
+//                    board[x + 2][y + 2] = -3;
+//                }
+//            }
+//            numberOfShipsDeployed ++;
+//            outOfBounds = true;
+//            System.out.println(numberOfShipsDeployed);
+//            x = -1;
+//            y = -1;
+//        }
         printInitialBoard(board);
+        System.out.println(initComputerShips().get(0)[0]);
         return "hello";
 
 
+    }
+
+    private static ArrayList <int[]>  initComputerShips() {
+        ArrayList<int[]> computerShipLocations = new ArrayList<>();
+        Random random = new Random();
+        int xCoord = 0;
+        int yCoord = 0;
+        int[] coords = new int[5];
+        xCoord = random.nextInt(9) + 2;
+        yCoord = random.nextInt(9) + 2;
+        coords[0] = xCoord;
+        coords[1] = yCoord;
+        computerShipLocations.add(coords);
+        return computerShipLocations;
     }
 
 
