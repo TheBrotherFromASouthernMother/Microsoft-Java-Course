@@ -12,18 +12,16 @@ public class Encrypt {
         return encryptedText;
     }
 
+    public static String decryptString(String encryptedString) {
+        String ungroupedText = groupify.ungroupText(encryptedString);
+        String decipheredText = caesar.decipher(1, ungroupedText);
+        return decipheredText;
+    }
 
     public static void main(String[] args) {
         String enc = encryptString("No more war", 1, 2);
         System.out.println(enc);
-        String ungroupedText = groupify.ungroupText(enc);
-        String decipheredText = caesar.decipher(1, ungroupedText);
+        String decipheredText = decryptString(enc);
         System.out.println(decipheredText) ;
-
-
-    }
-
-    public static String decryptString() {
-        return "";
     }
 }

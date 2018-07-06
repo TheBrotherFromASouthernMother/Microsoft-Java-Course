@@ -2,7 +2,7 @@ package DEV276x;
 
 public class Crypto {
 
-    public static Boolean isAlphaNumeric(char element) {
+    private static Boolean isAlphaNumeric(char element) {
         char[] punctuation = {',', '.', '\"', '!', '?', ' ', ':', ';', '(', ')', '\''};
         for (int i = 0; i < punctuation.length; i++) {
             if (punctuation[i] == (element)) {
