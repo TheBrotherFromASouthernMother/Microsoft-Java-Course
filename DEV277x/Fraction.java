@@ -48,7 +48,7 @@ public class Fraction {
         return (this.numerator / this.denominator) + fraction;
     }
 
-    
+
 
 
 }
