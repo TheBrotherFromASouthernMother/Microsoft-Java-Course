@@ -6,14 +6,20 @@ public class SelectionSort {
 
     public static int[] selectionSort(int[] arr) {
         int temp;
+        int min;
+        int minIndex;
         for (int i = 0; i < arr.length; i++) {
+            min = arr[i];
+            minIndex = i;
             for (int j = 0; j < arr.length; j++) {
-                if (arr[i] < arr[j]) {
-                    temp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = temp;
+                if (arr[j] < min) {
+                    min = arr[j];
+                    minIndex = j;
                 }
             }
+            temp = arr[i];
+            arr[i] = min;
+            arr[minIndex] = temp;
         }
         return arr;
     }

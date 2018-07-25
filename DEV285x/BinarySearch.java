@@ -1,3 +1,4 @@
+package DEV285x;
 
 public class BinarySearch {
     static int[] arr = {1, 5, 7, 10, 12, 44, 54, 61, 65, 90, 99};

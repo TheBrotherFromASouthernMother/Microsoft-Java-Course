@@ -11,7 +11,7 @@ public class Bubble {
                 if (arr[j] == arr[arr.length -1]) {
                     break;
                 }
-                if(arr[j] > arr[j + 1]) {
+                if (arr[j] > arr[j + 1]) {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
